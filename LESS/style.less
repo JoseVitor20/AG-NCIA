@@ -1,0 +1,680 @@
+@font-face{
+    font-family:FontPadrão;
+    src:url('../FONT/Roboto/Roboto-Light.ttf');
+}
+
+html,body{height: 100%;background-color: rgba(224,224,224,0.5);}
+
+body{font-family:FontPadrão;}
+
+input[type=text],
+input[type=submit],
+input[type=email],
+textarea{
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+div.container{
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto; 
+}
+
+div.clear{
+    clear: both;
+}
+
+// HEADER DO SITE
+
+    header{
+        height: 100vmin;
+        background-image: url('../IMAGE/HOME.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    div#menu-topo{ 
+        width: 100%;
+        height: 10vmin;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        div.logo-marca{
+            width:55vmin;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-direction: row;
+            div.logo{
+                float: left;
+                width: 8vmin;
+                height: 8vmin;
+                display: block;
+                background-image: url('../IMAGE/logo-Marca.png');
+                background-size: 100% 100%;
+                cursor: pointer;
+                position: relative;
+                &:hover{transform: scale(1.1);}
+            }
+            h2{
+                color: white;
+                font-style: italic;
+                font-size: 6vmin;
+                font-weight: bold;
+                margin-left: 3vmin;
+                display: block;
+                b{color: aqua;font-size: 7vmin;}
+                strong{color: aqua;font-size: 7vmin;position: relative;top: 2.5vmin;left:-.5vmin;}
+                n{text-decoration: underline;}
+                cursor: pointer;
+                &:hover{transform: scale(1.1);text-shadow: 0px 0px 10px aqua;}
+            }
+
+        }
+
+        // DESKTOP
+            nav#desktop{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                float: right;
+                ul{
+                    list-style-type: none; 
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                li{ 
+                    display: inline-block;
+                    margin: 0 1vmin;
+                    &:hover{
+                        border: 1px solid white;
+                        border-radius: 20px;
+                        padding:0px 10px;
+                    }   
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        font-size: 2.3vmax;
+                    }
+                }
+                li.btn-nav{
+                    border: 1px solid white;
+                    border-radius: 20px;
+                    padding: 0px 10px;
+                }
+            }
+        
+        // MOBILE
+            nav#mobile{
+                width: 0%;
+                height: 100%;
+                z-index: 999;
+                top: 0;
+                right: 0;
+                i#abrir-menu{
+                    position: absolute;
+                    right: 6vmin;
+                    top:6vmin;
+                    display: none;
+                    font-size: 6vmin;
+                    color: white;
+                    cursor: pointer;
+                    &:hover{transform: scale(1.1);}
+                }
+                div#menu-mobile{
+                    width: 60vmin;
+                    height: 100%;
+                    overflow: hidden;
+                    background-color: rgb(15, 83, 83);
+                    display: none;
+                    margin: 0 auto;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    i#fechar-menu{
+                        position: absolute;
+                        right: 6vmin;
+                        top:6vmin;
+                        font-size: 6vmin;
+                        color: white;
+                        cursor: pointer;
+                    }
+                    div.menu-lista{
+                        text-align: center;
+                        position: relative;
+                        top:50%;
+                        transform: translateY(-50%);
+                        div.imagem-Mobile{
+                            width: 13vmin;
+                            height: 13vmin;
+                            display: block;
+                            margin: 0 auto;
+                            position: relative;
+                            background-image: url('../IMAGE/logo-Marca.png');
+                            background-size: 100% 100%;
+                            cursor: pointer;
+                            &:hover{transform: scale(1.1);}
+                        }
+                        h3{
+                            color: white;
+                            font-style: italic;
+                            font-size: 6vmin;
+                            font-weight: bold;
+                            margin-left: 3vmin;
+                            b{color: aqua;font-size: 8vmin;}
+                            strong{color: aqua;font-size: 8vmin;position: relative;top: 2.5vmin;left:-.5vmin;}
+                            n{text-decoration: underline;}
+                            user-select: none;
+                            margin:0px 0px 30px 0px;
+                            cursor: pointer;
+                            &:hover{transform: scale(1.1);text-shadow: 0px 0px 10px aqua;}
+                        }
+                        div.descricao-lista{
+                            &:hover :not(:hover){transform: scale(.9); background-color: rgba(128, 128, 128, 0.273);}
+                            h2{
+                                width: 80%;
+                                color: white;
+                                font-size: 4vmin;
+                                padding: 1vmin 2vmin;
+                                margin: 1vmin auto;
+                                cursor: pointer;
+                                background-color: rgba(128, 128, 128, 0.378);
+                                border-radius: 20px;
+                            }
+                        }
+                    }
+                }
+                @media screen and (max-width:768px){
+                    div#menu-mobile{display: none;}
+                    i#abrir-menu{display: block;}
+                }
+            }  
+     
+            @media screen and (max-width: 768px){
+                div.logo-marca{
+                    display: none;
+                }
+
+                nav#desktop{display: none;}
+            }
+
+        }
+
+    div.chamada-header{
+        width: 100%;
+        float: left;
+        position: relative;
+        top: 50%;
+        transform: translateY(50%);
+        h2{
+            font-size: 6vmin;
+            color:white;
+            font-weight: lighter;
+        }
+        p{
+            font-size: 2.8vmin;
+            color:white;
+            margin: 10px;
+            width: 50vmin;
+        }
+        form{
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            margin: 20px 0;
+        }
+        input[type=email]{
+            display: flex;
+            flex-direction: row;
+            border-radius: 20px;
+            background-color: white;
+            width: 35vmin;
+            height: 30px;
+            border: none;
+            outline: none;
+            padding-left: 10px;
+            color: white;
+            font-size: 2.5vmin;
+        }
+        button{
+            border-radius: 20px;
+            background-color:rgb(1, 142, 137);
+            width: 17vmin;
+            line-height: 5vmin;
+            font-weight: bolder;
+            margin: 0px 20px;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 3vmin;
+            transition: .40s;
+            z-index: 0;
+            &:hover{transform: scale(.9);background-color:rgb(28, 124, 121);}
+            cursor: pointer;
+            &:active{background-color:rgb(4, 108, 105);}
+        }
+        @media screen and (max-width: 768px){
+            text-align: center;
+            transform: translateY(0%);
+            h2{font-size: 7vmin;}
+            p{
+                text-align: center;
+                margin: 0 auto;
+                font-size: 4vmin;
+                width: 80%;
+            }
+            form{
+                margin: 20px auto;
+                flex-direction: column;
+                input[type=email]{
+                    width: 80%;
+                    height: 7vmin;
+                    margin: 20px 0;
+                }
+                button{
+                    width: 25vmin;
+                    height: 7vmin;
+                    font-size: 4vmin;
+                }
+            }
+        }
+    }
+
+// primeira-descricao-empresa
+
+    section#primeira-descricao-empresa{
+        text-align: center;
+        padding: 30px 0px;
+        p{
+            display: inline-block;
+            max-width: 50vmax;
+            font-size: 3vmin;
+            font-style: italic;
+            color: rgb(74, 73, 73);
+            b{color: black;font-weight: bold;}
+        }
+    }
+
+// segunda-descricao-empresa
+
+    section#segunda-descricao-empresa{
+        padding: 30px 0;
+        div.texto-descricao{
+            float: left;  
+            width: 50%;
+            height:auto;
+            h3{
+                font-size: 4vmin;
+                font-weight: bold;
+                text-align: left;
+                line-height: 5vmin;
+                padding-right: 6vmin;
+            } 
+            p{
+                margin-top: 3vmin;
+                font-size: 2.5vmin;
+                color:rgb(83, 82, 82);
+                line-height: 4vmin;
+                padding-right: 6vmin;
+            }
+            img{
+                width: 100%;
+                height: 30vmax;
+                background-image: url('../IMAGE/mockup.png');
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            @media  screen and (max-width:1000px) {
+                width: 100%;
+                text-align: center;
+                h3{
+                    text-align: center;
+                }
+                p{
+                    padding-right: 0vmin;
+                }
+                img{
+                    width: 60vmin;
+                    height: 60vmin;
+                    margin-top: 7vmin;
+                }
+            }
+        }
+    }
+
+// terceira-descricao-empresa
+
+    section#terceira-descricao-empresa{
+        padding: 30px 0px;
+        margin-bottom: 25vmin;
+        div.container{
+            height: 80vmin;
+            background-image: url('../IMAGE/apresentação.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            div.box-depoimento{
+                position: absolute;
+                left: 50%;
+                top: 70%;
+                width: 50%;
+                max-width: 506px;
+                background-color: white;
+                padding: 10px 30px;
+                border: 1px solid gray;
+                p{
+                    font-size: 3vmin;
+                    font-weight: lighter;
+                    color: rgb(85, 85, 85);
+                    margin:20px 0;
+                    b{
+                        color: black;
+                    }
+                }   
+                @media screen and (max-width:940px) {
+                    width: 80%;
+                    transform: translateX(-50%);
+                    p{font-size: 3vmin;}
+                }
+            }
+        }
+    }
+
+// servicos
+
+    section#servicos{
+        div.title-servicos{
+            text-align: center;
+            padding: 3vmin 0px;
+            h3{
+                color: #31475e;
+                font-size: 4vmin;
+                i{
+                    margin-top: 10vmin;
+                }
+            }
+        }
+        div.flex-servicos{
+            display: flex;
+            flex-wrap: wrap;
+            div.box-servicos{
+                width: calc(33.3% - 2%);
+                background-color: white;
+                box-shadow: 0px 0px 10px 1px rgb(180, 179, 179);
+                border-radius: 10px;
+                margin-bottom: 20px;
+                margin: 1%;
+                overflow: hidden;
+                div.img-servicos{
+                    width: 100%;
+                    height:17vmax;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        background-size: 100% 100%;
+                        background-position: center;
+                    }
+                    .img1{background-image: url('../IMAGE/social-media.png');}
+                    .img2{background-image: url('../IMAGE/student-work.jpg');}
+                    .img3{background-image: url('../IMAGE/workplace.jpg');}
+                    .img4{background-image: url('../IMAGE/samsung.jpg');}
+                    .img5{background-image: url('../IMAGE/digital-marketing.jpg');}
+                    .img6{background-image: url('../IMAGE/cottonbro.jpg');}
+
+                }div.box-servicos-wrapper{
+                    padding: 5vmin;
+                    h2{
+                        font-size: 2vmax;
+                        color: #31475e;
+                    }
+                    p{
+                        margin: 10px 0;
+                        font-size: 1.5vmax;
+                        color: #446990;
+                    }
+                    a{
+                        display: block;
+                        text-decoration: none;
+                        width: 8vmax;
+                        text-align: center;
+                        border-radius: 10vmin;
+                        height: 2.5vmax;
+                        line-height: 2.5vmax;
+                        color: rgb(68, 67, 67);
+                        font-size: 1.2vmax;
+                        background-color: lightgray;
+                        &:hover{
+                            transform: scale(.9);
+                            background-color: rgb(148, 148, 148);
+                            color: white;
+                        }
+                    }
+                }
+                @media screen and (max-width:900px){
+                    width: 80%;
+                    margin: 2vmin auto;
+                    div.img-servicos{
+                        height: 50vmin;
+                    }
+                    div.box-servicos-wrapper{
+                        h2{
+                            font-size: 4vmin;
+                        }
+                        p{
+                            font-size: 4vmin;
+                        }
+                        a{
+                            width: 25vmin;
+                            height: 7vmin;
+                            line-height: 7vmin;
+                            font-size: 3vmin;
+                            background-color: lightgray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+// portifolio
+
+    section#portifolio{
+        padding: 20px 0px;
+        background-color: white;
+        div.container{
+            max-width: 960px;
+            padding: 15px 0px;
+            background-color: rgba(224,224,224,0.5);        }
+        h2{
+            text-align: center;
+            color: #31475e;
+            font-size: 2vmax;
+        }
+        div.empresas{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0px;
+            div.empresa-single{
+                width:calc(25% - 5px);
+                height: 12vmin;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid gray;
+                margin-top: 5vmin;
+                img{
+                    width:40%;
+                    height:90%;
+                }
+            }
+            @media screen and (max-width:530px){
+                flex-direction: column;  
+                div.empresa-single{
+                    width:calc(60% - 10px);
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid gray;
+                    img{
+                        width: 30vmin;
+                        height: 30vmin;
+                    }
+                }              
+            }
+        }   
+    }
+
+// formulario
+
+    section#formulario{
+        padding: 30px 0;
+        div.container{width: 50%;
+            h2{
+                text-align: center;
+                font-size: 3vmin;
+                color: #31475e;
+            }
+            form{
+                margin-top: 10px;
+                input[type=text]{
+                    width: 100%;
+                    height: 8vmin;
+                    border: 2px solid gray;
+                    margin: 1vmin 0px;
+                    padding-left: 10px;
+                    outline: none;
+                    border-radius: 20px;
+                    font-size: 2.5vmin;
+                }
+                textarea{
+                    width: 100%;
+                    height: 15vmin;
+                    border: 2px solid gray;
+                    margin-top: 8px;
+                    padding : 10px;
+                    outline: none;
+                    border-radius: 3vmin;
+                    font-size: 2.5vmin;
+                    resize: none;
+                }
+                button{
+                    border-radius: 20px;
+                    background-color:rgb(1, 142, 137);
+                    width: 25vmin;
+                    line-height: 6vmin;
+                    font-weight: bolder;
+                    margin: 3vmin 0;
+                    border: none;
+                    outline: none;
+                    color: white;
+                    font-size: 3vmin;
+                    transition: .40s;
+                    z-index: 0;
+                    &:hover{transform: scale(.9);background-color:rgb(28, 124, 121);}
+                    cursor: pointer;
+                    &:active{background-color:rgb(4, 108, 105);}
+                }
+            }
+            @media screen and (max-width: 768px){
+                width: 80%;
+            }
+        }
+    }        
+
+// footer
+
+    footer{
+        padding: 10vmin 0;
+        div.box-footer{
+            float: left;
+            width: 33.3%;
+            padding: 0 2vmin;
+            h2{
+                color: #31475e;
+                font-size: 4vmin;
+                font-weight: normal;
+            }
+            p{
+                margin-top: 10px;
+                font-weight: 300;
+                font-size: 2.5vmin;
+            }
+            form{
+                input[type=text]{
+                    outline: none;
+                    border: 1px solid gray;
+                    border-radius: 3vmin;
+                    line-height: 3vmin;
+                    margin-top: 1vmin;
+                    padding-left: 10px;
+                    font-size: 2vmin;
+                }
+                button{
+                    width: 4vmin;
+                    height: 4vmin;
+                    border-radius: 2vmin;
+                    border: 1px solid gray;
+                    outline: hidden;
+                    text-align: center;
+                    background-color:#acd4ff;
+                    &:hover{
+                        background-color: #5d95d1;
+                        cursor: pointer;
+                        margin: 0 auto;
+                    }
+                    i{width: 2vmin;height: 2vmin;}
+                }
+            }
+            @media screen and (max-width:840px){
+                width: 100%;
+                text-align: center;
+                margin: 3vmin auto;
+                h2{font-size: 5vmin;}
+                p{font-size: 3vmin;}
+                form{
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    input[type=text]{
+                        width:80%;
+                        height: 7vmin;
+                        outline: none;
+                        border: 1px solid gray;
+                        border-radius: 3vmin;
+                        line-height: 3vmin;
+                        margin-top: 1vmin;
+                        font-size: 4vmin;
+                    }
+                    button{
+                        width: 50%;
+                        height: 7vmin;
+                        margin-top: 2vmin;
+                        border-radius:10vmin;
+                        text-align: center;
+                        background-color:#acd4ff;
+                        &:hover{
+                            background-color: #5d95d1;
+                            cursor: pointer;
+                            margin-top: 2vmin;
+                        }
+                    }
+                }
+            }
+        }
+    }

@@ -1,0 +1,732 @@
+@font-face {
+  font-family: FontPadrão;
+  src: url('../FONT/Roboto/Roboto-Light.ttf');
+}
+html,
+body {
+  height: 100%;
+  background-color: rgba(224, 224, 224, 0.5);
+}
+body {
+  font-family: FontPadrão;
+}
+input[type=text],
+input[type=submit],
+input[type=email],
+textarea {
+  appearance: none;
+  -webkit-appearance: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+div.container {
+  max-width: 1280px;
+  padding: 0 2%;
+  margin: 0 auto;
+}
+div.clear {
+  clear: both;
+}
+header {
+  height: 100vmin;
+  background-image: url('../IMAGE/HOME.jpg');
+  background-size: cover;
+  background-position: center;
+}
+div#menu-topo {
+  width: 100%;
+  height: 10vmin;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+div#menu-topo div.logo-marca {
+  width: 55vmin;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+div#menu-topo div.logo-marca div.logo {
+  float: left;
+  width: 8vmin;
+  height: 8vmin;
+  display: block;
+  background-image: url('../IMAGE/logo-Marca.png');
+  background-size: 100% 100%;
+  cursor: pointer;
+  position: relative;
+}
+div#menu-topo div.logo-marca div.logo:hover {
+  transform: scale(1.1);
+}
+div#menu-topo div.logo-marca h2 {
+  color: white;
+  font-style: italic;
+  font-size: 6vmin;
+  font-weight: bold;
+  margin-left: 3vmin;
+  display: block;
+  cursor: pointer;
+}
+div#menu-topo div.logo-marca h2 b {
+  color: aqua;
+  font-size: 7vmin;
+}
+div#menu-topo div.logo-marca h2 strong {
+  color: aqua;
+  font-size: 7vmin;
+  position: relative;
+  top: 2.5vmin;
+  left: -0.5vmin;
+}
+div#menu-topo div.logo-marca h2 n {
+  text-decoration: underline;
+}
+div#menu-topo div.logo-marca h2:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 0px 10px aqua;
+}
+div#menu-topo nav#desktop {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  float: right;
+}
+div#menu-topo nav#desktop ul {
+  list-style-type: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+div#menu-topo nav#desktop li {
+  display: inline-block;
+  margin: 0 1vmin;
+}
+div#menu-topo nav#desktop li:hover {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 0px 10px;
+}
+div#menu-topo nav#desktop li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.3vmax;
+}
+div#menu-topo nav#desktop li.btn-nav {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 0px 10px;
+}
+div#menu-topo nav#mobile {
+  width: 0%;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  right: 0;
+}
+div#menu-topo nav#mobile i#abrir-menu {
+  position: absolute;
+  right: 6vmin;
+  top: 6vmin;
+  display: none;
+  font-size: 6vmin;
+  color: white;
+  cursor: pointer;
+}
+div#menu-topo nav#mobile i#abrir-menu:hover {
+  transform: scale(1.1);
+}
+div#menu-topo nav#mobile div#menu-mobile {
+  width: 60vmin;
+  height: 100%;
+  overflow: hidden;
+  background-color: #0f5353;
+  display: none;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+div#menu-topo nav#mobile div#menu-mobile i#fechar-menu {
+  position: absolute;
+  right: 6vmin;
+  top: 6vmin;
+  font-size: 6vmin;
+  color: white;
+  cursor: pointer;
+}
+div#menu-topo nav#mobile div#menu-mobile div.menu-lista {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+div#menu-topo nav#mobile div#menu-mobile div.menu-lista div.imagem-Mobile {
+  width: 13vmin;
+  height: 13vmin;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  background-image: url('../IMAGE/logo-Marca.png');
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+div#menu-topo nav#mobile div#menu-mobile div.menu-lista div.imagem-Mobile:hover {
+  transform: scale(1.1);
+}
+div#menu-topo nav#mobile div#menu-mobile div.menu-lista h3 {
+  color: white;
+  font-style: italic;
+  font-size: 6vmin;
+  font-weight: bold;
+  margin-left: 3vmin;
+  user-select: none;
+  margin: 0px 0px 30px 0px;
+  cursor: pointer;
+}
+div#menu-topo nav#mobile div#menu-mobile div.menu-lista h3 b {
+  color: aqua;
+  font-size: 8vmin;
+}
+div#menu-topo nav#mobile div#menu-mobile div.menu-lista h3 strong {
+  color: aqua;
+  font-size: 8vmin;
+  position: relative;
+  top: 2.5vmin;
+  left: -0.5vmin;
+}
+div#menu-topo nav#mobile div#menu-mobile div.menu-lista h3 n {
+  text-decoration: underline;
+}
+div#menu-topo nav#mobile div#menu-mobile div.menu-lista h3:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 0px 10px aqua;
+}
+div#menu-topo nav#mobile div#menu-mobile div.menu-lista div.descricao-lista:hover :not(:hover) {
+  transform: scale(0.9);
+  background-color: rgba(128, 128, 128, 0.273);
+}
+div#menu-topo nav#mobile div#menu-mobile div.menu-lista div.descricao-lista h2 {
+  width: 80%;
+  color: white;
+  font-size: 4vmin;
+  padding: 1vmin 2vmin;
+  margin: 1vmin auto;
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.378);
+  border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+  div#menu-topo nav#mobile div#menu-mobile {
+    display: none;
+  }
+  div#menu-topo nav#mobile i#abrir-menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  div#menu-topo div.logo-marca {
+    display: none;
+  }
+  div#menu-topo nav#desktop {
+    display: none;
+  }
+}
+div.chamada-header {
+  width: 100%;
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
+}
+div.chamada-header h2 {
+  font-size: 6vmin;
+  color: white;
+  font-weight: lighter;
+}
+div.chamada-header p {
+  font-size: 2.8vmin;
+  color: white;
+  margin: 10px;
+  width: 50vmin;
+}
+div.chamada-header form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+}
+div.chamada-header input[type=email] {
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  background-color: white;
+  width: 35vmin;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  color: white;
+  font-size: 2.5vmin;
+}
+div.chamada-header button {
+  border-radius: 20px;
+  background-color: #018e89;
+  width: 17vmin;
+  line-height: 5vmin;
+  font-weight: bolder;
+  margin: 0px 20px;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 3vmin;
+  transition: 0.4s;
+  z-index: 0;
+  cursor: pointer;
+}
+div.chamada-header button:hover {
+  transform: scale(0.9);
+  background-color: #1c7c79;
+}
+div.chamada-header button:active {
+  background-color: #046c69;
+}
+@media screen and (max-width: 768px) {
+  div.chamada-header {
+    text-align: center;
+    transform: translateY(0%);
+  }
+  div.chamada-header h2 {
+    font-size: 7vmin;
+  }
+  div.chamada-header p {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 4vmin;
+    width: 80%;
+  }
+  div.chamada-header form {
+    margin: 20px auto;
+    flex-direction: column;
+  }
+  div.chamada-header form input[type=email] {
+    width: 80%;
+    height: 7vmin;
+    margin: 20px 0;
+  }
+  div.chamada-header form button {
+    width: 25vmin;
+    height: 7vmin;
+    font-size: 4vmin;
+  }
+}
+section#primeira-descricao-empresa {
+  text-align: center;
+  padding: 30px 0px;
+}
+section#primeira-descricao-empresa p {
+  display: inline-block;
+  max-width: 50vmax;
+  font-size: 3vmin;
+  font-style: italic;
+  color: #4a4949;
+}
+section#primeira-descricao-empresa p b {
+  color: black;
+  font-weight: bold;
+}
+section#segunda-descricao-empresa {
+  padding: 30px 0;
+}
+section#segunda-descricao-empresa div.texto-descricao {
+  float: left;
+  width: 50%;
+  height: auto;
+}
+section#segunda-descricao-empresa div.texto-descricao h3 {
+  font-size: 4vmin;
+  font-weight: bold;
+  text-align: left;
+  line-height: 5vmin;
+  padding-right: 6vmin;
+}
+section#segunda-descricao-empresa div.texto-descricao p {
+  margin-top: 3vmin;
+  font-size: 2.5vmin;
+  color: #535252;
+  line-height: 4vmin;
+  padding-right: 6vmin;
+}
+section#segunda-descricao-empresa div.texto-descricao img {
+  width: 100%;
+  height: 30vmax;
+  background-image: url('../IMAGE/mockup.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1000px) {
+  section#segunda-descricao-empresa div.texto-descricao {
+    width: 100%;
+    text-align: center;
+  }
+  section#segunda-descricao-empresa div.texto-descricao h3 {
+    text-align: center;
+  }
+  section#segunda-descricao-empresa div.texto-descricao p {
+    padding-right: 0vmin;
+  }
+  section#segunda-descricao-empresa div.texto-descricao img {
+    width: 60vmin;
+    height: 60vmin;
+    margin-top: 7vmin;
+  }
+}
+section#terceira-descricao-empresa {
+  padding: 30px 0px;
+  margin-bottom: 25vmin;
+}
+section#terceira-descricao-empresa div.container {
+  height: 80vmin;
+  background-image: url('../IMAGE/apresentação.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+section#terceira-descricao-empresa div.container div.box-depoimento {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  width: 50%;
+  max-width: 506px;
+  background-color: white;
+  padding: 10px 30px;
+  border: 1px solid gray;
+}
+section#terceira-descricao-empresa div.container div.box-depoimento p {
+  font-size: 3vmin;
+  font-weight: lighter;
+  color: #555555;
+  margin: 20px 0;
+}
+section#terceira-descricao-empresa div.container div.box-depoimento p b {
+  color: black;
+}
+@media screen and (max-width: 940px) {
+  section#terceira-descricao-empresa div.container div.box-depoimento {
+    width: 80%;
+    transform: translateX(-50%);
+  }
+  section#terceira-descricao-empresa div.container div.box-depoimento p {
+    font-size: 3vmin;
+  }
+}
+section#servicos div.title-servicos {
+  text-align: center;
+  padding: 3vmin 0px;
+}
+section#servicos div.title-servicos h3 {
+  color: #31475e;
+  font-size: 4vmin;
+}
+section#servicos div.title-servicos h3 i {
+  margin-top: 10vmin;
+}
+section#servicos div.flex-servicos {
+  display: flex;
+  flex-wrap: wrap;
+}
+section#servicos div.flex-servicos div.box-servicos {
+  width: calc(33.3% - 2%);
+  background-color: white;
+  box-shadow: 0px 0px 10px 1px #b4b3b3;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin: 1%;
+  overflow: hidden;
+}
+section#servicos div.flex-servicos div.box-servicos div.img-servicos {
+  width: 100%;
+  height: 17vmax;
+}
+section#servicos div.flex-servicos div.box-servicos div.img-servicos img {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-position: center;
+}
+section#servicos div.flex-servicos div.box-servicos div.img-servicos .img1 {
+  background-image: url('../IMAGE/social-media.png');
+}
+section#servicos div.flex-servicos div.box-servicos div.img-servicos .img2 {
+  background-image: url('../IMAGE/student-work.jpg');
+}
+section#servicos div.flex-servicos div.box-servicos div.img-servicos .img3 {
+  background-image: url('../IMAGE/workplace.jpg');
+}
+section#servicos div.flex-servicos div.box-servicos div.img-servicos .img4 {
+  background-image: url('../IMAGE/samsung.jpg');
+}
+section#servicos div.flex-servicos div.box-servicos div.img-servicos .img5 {
+  background-image: url('../IMAGE/digital-marketing.jpg');
+}
+section#servicos div.flex-servicos div.box-servicos div.img-servicos .img6 {
+  background-image: url('../IMAGE/cottonbro.jpg');
+}
+section#servicos div.flex-servicos div.box-servicos div.box-servicos-wrapper {
+  padding: 5vmin;
+}
+section#servicos div.flex-servicos div.box-servicos div.box-servicos-wrapper h2 {
+  font-size: 2vmax;
+  color: #31475e;
+}
+section#servicos div.flex-servicos div.box-servicos div.box-servicos-wrapper p {
+  margin: 10px 0;
+  font-size: 1.5vmax;
+  color: #446990;
+}
+section#servicos div.flex-servicos div.box-servicos div.box-servicos-wrapper a {
+  display: block;
+  text-decoration: none;
+  width: 8vmax;
+  text-align: center;
+  border-radius: 10vmin;
+  height: 2.5vmax;
+  line-height: 2.5vmax;
+  color: #444343;
+  font-size: 1.2vmax;
+  background-color: lightgray;
+}
+section#servicos div.flex-servicos div.box-servicos div.box-servicos-wrapper a:hover {
+  transform: scale(0.9);
+  background-color: #949494;
+  color: white;
+}
+@media screen and (max-width: 900px) {
+  section#servicos div.flex-servicos div.box-servicos {
+    width: 80%;
+    margin: 2vmin auto;
+  }
+  section#servicos div.flex-servicos div.box-servicos div.img-servicos {
+    height: 50vmin;
+  }
+  section#servicos div.flex-servicos div.box-servicos div.box-servicos-wrapper h2 {
+    font-size: 4vmin;
+  }
+  section#servicos div.flex-servicos div.box-servicos div.box-servicos-wrapper p {
+    font-size: 4vmin;
+  }
+  section#servicos div.flex-servicos div.box-servicos div.box-servicos-wrapper a {
+    width: 25vmin;
+    height: 7vmin;
+    line-height: 7vmin;
+    font-size: 3vmin;
+    background-color: lightgray;
+  }
+}
+section#portifolio {
+  padding: 20px 0px;
+  background-color: white;
+}
+section#portifolio div.container {
+  max-width: 960px;
+  padding: 15px 0px;
+  background-color: rgba(224, 224, 224, 0.5);
+}
+section#portifolio h2 {
+  text-align: center;
+  color: #31475e;
+  font-size: 2vmax;
+}
+section#portifolio div.empresas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}
+section#portifolio div.empresas div.empresa-single {
+  width: calc(25% - 5px);
+  height: 12vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  margin-top: 5vmin;
+}
+section#portifolio div.empresas div.empresa-single img {
+  width: 40%;
+  height: 90%;
+}
+@media screen and (max-width: 530px) {
+  section#portifolio div.empresas {
+    flex-direction: column;
+  }
+  section#portifolio div.empresas div.empresa-single {
+    width: calc(60% - 10px);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+  }
+  section#portifolio div.empresas div.empresa-single img {
+    width: 30vmin;
+    height: 30vmin;
+  }
+}
+section#formulario {
+  padding: 30px 0;
+}
+section#formulario div.container {
+  width: 50%;
+}
+section#formulario div.container h2 {
+  text-align: center;
+  font-size: 3vmin;
+  color: #31475e;
+}
+section#formulario div.container form {
+  margin-top: 10px;
+}
+section#formulario div.container form input[type=text] {
+  width: 100%;
+  height: 8vmin;
+  border: 2px solid gray;
+  margin: 1vmin 0px;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 20px;
+  font-size: 2.5vmin;
+}
+section#formulario div.container form textarea {
+  width: 100%;
+  height: 15vmin;
+  border: 2px solid gray;
+  margin-top: 8px;
+  padding: 10px;
+  outline: none;
+  border-radius: 3vmin;
+  font-size: 2.5vmin;
+  resize: none;
+}
+section#formulario div.container form button {
+  border-radius: 20px;
+  background-color: #018e89;
+  width: 25vmin;
+  line-height: 6vmin;
+  font-weight: bolder;
+  margin: 3vmin 0;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 3vmin;
+  transition: 0.4s;
+  z-index: 0;
+  cursor: pointer;
+}
+section#formulario div.container form button:hover {
+  transform: scale(0.9);
+  background-color: #1c7c79;
+}
+section#formulario div.container form button:active {
+  background-color: #046c69;
+}
+@media screen and (max-width: 768px) {
+  section#formulario div.container {
+    width: 80%;
+  }
+}
+footer {
+  padding: 10vmin 0;
+}
+footer div.box-footer {
+  float: left;
+  width: 33.3%;
+  padding: 0 2vmin;
+}
+footer div.box-footer h2 {
+  color: #31475e;
+  font-size: 4vmin;
+  font-weight: normal;
+}
+footer div.box-footer p {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 2.5vmin;
+}
+footer div.box-footer form input[type=text] {
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 3vmin;
+  line-height: 3vmin;
+  margin-top: 1vmin;
+  padding-left: 10px;
+  font-size: 2vmin;
+}
+footer div.box-footer form button {
+  width: 4vmin;
+  height: 4vmin;
+  border-radius: 2vmin;
+  border: 1px solid gray;
+  outline: hidden;
+  text-align: center;
+  background-color: #acd4ff;
+}
+footer div.box-footer form button:hover {
+  background-color: #5d95d1;
+  cursor: pointer;
+  margin: 0 auto;
+}
+footer div.box-footer form button i {
+  width: 2vmin;
+  height: 2vmin;
+}
+@media screen and (max-width: 840px) {
+  footer div.box-footer {
+    width: 100%;
+    text-align: center;
+    margin: 3vmin auto;
+  }
+  footer div.box-footer h2 {
+    font-size: 5vmin;
+  }
+  footer div.box-footer p {
+    font-size: 3vmin;
+  }
+  footer div.box-footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer div.box-footer form input[type=text] {
+    width: 80%;
+    height: 7vmin;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 3vmin;
+    line-height: 3vmin;
+    margin-top: 1vmin;
+    font-size: 4vmin;
+  }
+  footer div.box-footer form button {
+    width: 50%;
+    height: 7vmin;
+    margin-top: 2vmin;
+    border-radius: 10vmin;
+    text-align: center;
+    background-color: #acd4ff;
+  }
+  footer div.box-footer form button:hover {
+    background-color: #5d95d1;
+    cursor: pointer;
+    margin-top: 2vmin;
+  }
+}
